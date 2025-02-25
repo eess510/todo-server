@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '3.0.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE' //spring boot 의존성 관리
 }
 
 group = 'org.example'
@@ -10,6 +12,15 @@ repositories {
 }
 
 dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+
+    runtimeOnly('com.h2database:h2') //인메모리 데이터베이스로 h2 사용
+
+    compileOnly('org.projectlombok:lombok') //개발편의를 위해 lombok 사용위해
+    annotationProcessor('org.projectlombok:lombok')
+
+
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
