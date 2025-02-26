@@ -1,5 +1,5 @@
 INSERT INTO TASK ( `TITLE`, `DESCRIPTION`,`STATUS`,`DUE_DATE`)
-    VALUES ('강의듣기', 'CP.01듣기', 'IN_PROGRESS`', now() + 1);
+    VALUES ('강의듣기', 'CP.01듣기', 'IN_PROGRESS', now() + 1);
 
 INSERT INTO TASK (`TITLE`, `DESCRIPTION`,`STATUS`,`DUE_DATE`)
 VALUES ('강의듣기', 'CP.02듣기', 'TODO', now() + 2);
